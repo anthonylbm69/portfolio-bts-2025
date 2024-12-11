@@ -2,6 +2,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import BlurFade from "@/components/ui/blur-fade";
 
 const Timeline = () => {
     const timelineData = [
@@ -12,8 +13,10 @@ const Timeline = () => {
     return (
         <div className="mt-14 relative w-full h-screen flex items-center justify-center px-4">
             <div className="absolute w-2 h-full bg-gray-300"></div>
+            <BlurFade delay={0.25 * 0.05} inView>
             <div className="relative flex flex-col gap-12">
                 {timelineData.map((item, index) => (
+
                     <div
                         key={index}
                         className={cn(
@@ -35,6 +38,7 @@ const Timeline = () => {
                     </div>
                 ))}
             </div>
+            </BlurFade>
         </div>
     );
 };

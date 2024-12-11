@@ -26,7 +26,7 @@ export default function Home() {
                             <CornerUpRight className="bg-sky-400 text-2xl" />
                             <WordRotate
                                 className="bg-sky-400 text-2xl font-bold text-black dark:text-white"
-                                words={["Ici c&apos;est moi", "Anthony", "Anto pour les intimes"]}
+                                words={["Ici c'est moi", "Anthony", "Anto pour les intimes"]}
                             />
                         </BlurFade>
                     </div>
@@ -47,36 +47,38 @@ export default function Home() {
                         À propos de moi
                     </h1>
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                        <Image
+                    <BlurFade delay={0.25 * 0.05} inView>
+                    <Image
                             src="/DSC04686.JPG"
                             alt="carre"
-                            height={350}
-                            width={220}
+                            height={500}
+                            width={400}
                             className="rounded-lg shadow-lg mt-4"
                         />
+                    </BlurFade>
                         <div className="leading-7">
                             <p className="mt-6">
                                 Bonjour ! 👋<br />
-                                Je m&apos;appelle Anthony Lybliamay, j&apos;ai 20 ans et je suis
+                                Je m&apos;appelle Anthony Lybliamay,&nbsp; j&apos;ai 20 ans et je suis
                                 actuellement étudiant en développement web. Passionné par le
-                                monde du numérique et de la technologie, je me spécialise dans
+                                monde du numérique et de la technologie,&nbsp; je me spécialise dans
                                 la création de sites et d&apos;applications web modernes et
                                 performants.
                             </p>
                             <p className="mt-6">
-                                Depuis que j&apos;ai découvert le code, j&apos;ai été captivé
+                                Depuis que j&apos;ai découvert le code,&nbsp; j&apos;ai été captivé
                                 par la possibilité de donner vie à des idées grâce à la
-                                programmation. Aujourd&apos;hui, j&apos;affine mes compétences
-                                en front-end et back-end, en utilisant des technologies comme
-                                React, Node.js, etc.
+                                programmation. Aujourd&apos;hui,&nbsp; j&apos;affine mes compétences
+                                en front-end et back-end,&nbsp; en utilisant des technologies comme
+                                React,&nbsp; Node.js,&nbsp; etc.
                             </p>
                             <p className="mt-6">
                                 Mon objectif est de continuer à apprendre et de contribuer à des
-                                projets qui combinent créativité, performance et innovation.
+                                projets qui combinent créativité,&nbsp; performance et innovation.
                             </p>
                             <p className="mt-6">
-                                En dehors du développement, j&apos;aime jouer aux jeux vidéo,
-                                créer du contenu (comme des vidéos et des photos), voyager, et
+                                En dehors du développement,&nbsp; j&apos;aime jouer aux jeux vidéo,
+                                créer du contenu (comme des vidéos et des photos),&nbsp; voyager,&nbsp; et
                                 explorer de nouvelles idées.
                             </p>
                         </div>
