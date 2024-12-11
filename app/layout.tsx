@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Layout/header";
 import Footer from "@/components/Layout/footer";
 import ReactClientProvider from "@/components/Provider/queryClientProvider";
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sideBarWithStickyButton";
