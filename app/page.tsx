@@ -6,11 +6,6 @@ import {Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious}
 import {Card, CardContent} from "@/components/ui/card";
 import Timeline from "@/components/timeline/timeline";
 
-const images = Array.from({ length: 9 }, (_, i) => {
-    const isLandscape = i % 2 === 0;
-    return `/antorando.jpg`;
-});
-
 export default function Home() {
   return (
       <>
