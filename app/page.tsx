@@ -12,10 +12,24 @@ import {
 import { Card, CardContent } from "@/components/ui/card";
 import ProjectCard from "@/components/Project-Card/projectCard";
 import React from "react";
-import {Button} from "@mui/base";
-import {TimelineDemo} from "@/components/timeline/timeline";
+import { Button } from "@mui/base";
+import { TimelineDemo } from "@/components/timeline/timeline";
+
+interface CarouselItemProps {
+    src: string;
+    alt: string;
+}
 
 export default function Home() {
+    // Déclaration explicite du tableau d'éléments avec le type CarouselItemProps[]
+    const carouselItems: CarouselItemProps[] = [
+        { src: "/react.png", alt: "React Logo" },
+        { src: "/next.svg", alt: "Next.js Logo" },
+        { src: "/html.png", alt: "HTML Logo" },
+        { src: "/css.png", alt: "CSS Logo" },
+        { src: "/js.png", alt: "JavaScript Logo" },
+    ];
+
     return (
         <>
             <div id="home" className="md:container md:mx-auto">
@@ -48,15 +62,15 @@ export default function Home() {
                         À propos de moi
                     </h1>
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
-                    <BlurFade delay={0.25 * 0.05} inView>
-                    <Image
-                            src="/DSC04686.JPG"
-                            alt="carre"
-                            height={500}
-                            width={400}
-                            className="rounded-lg shadow-lg mt-4"
-                        />
-                    </BlurFade>
+                        <BlurFade delay={0.25 * 0.05} inView>
+                            <Image
+                                src="/DSC04686.JPG"
+                                alt="carre"
+                                height={500}
+                                width={400}
+                                className="rounded-lg shadow-lg mt-4"
+                            />
+                        </BlurFade>
                         <div className="leading-7">
                             <p className="mt-6">
                                 Bonjour ! 👋<br />
@@ -96,13 +110,7 @@ export default function Home() {
                             className="w-full max-w-xs"
                         >
                             <CarouselContent>
-                                {[
-                                    { src: "/react.png", alt: "React Logo" },
-                                    { src: "/next.svg", alt: "Next.js Logo" },
-                                    { src: "/html.png", alt: "HTML Logo" },
-                                    { src: "/css.png", alt: "CSS Logo" },
-                                    { src: "/js.png", alt: "JavaScript Logo" },
-                                ].map((item, index) => (
+                                {carouselItems.map((item: CarouselItemProps, index: number) => (
                                     <CarouselItem
                                         key={index}
                                         className="md:basis-1/2 lg:basis-1/3"

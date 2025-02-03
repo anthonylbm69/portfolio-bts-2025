@@ -1,6 +1,10 @@
 import { Card } from "@/components/ui/card";
-
-export default function ProjectCard({ title, description, imageUrl }) {
+interface ProjectCardProps {
+    title: string;
+    description: string;
+    imageUrl: string;
+}
+export default function ProjectCard({ title, description, imageUrl }: ProjectCardProps) {
     return (
         <Card className="shadow-lg mt-5 hover:shadow-xl transition duration-300 ease-in-out">
             <div className="relative">
