@@ -24,15 +24,12 @@ export default function Contact() {
                         <CardContent>
                             <div className="space-y-2">
                                 <div className="flex items-center space-x-2">
-                                    <Avatar alt="postal address" className="w-4 h-4" />
                                     <span>Lyon, 69000</span>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                    <Avatar alt="phone number" className="w-4 h-4" />
                                     <span>0768220603</span>
                                 </div>
                                 <div className="flex items-center space-x-2">
-                                    <Avatar alt="email address" className="w-4 h-4" />
                                     <Link href="#" prefetch={false}>
                                         anthony.lybliamay@gmail.com
                                     </Link>
