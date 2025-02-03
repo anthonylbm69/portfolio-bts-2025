@@ -10,7 +10,6 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import {TimelineDemo} from "@/components/timeline/timeline";
 import ProjectCard from "@/components/Project-Card/projectCard";
 import React from "react";
 import {Button} from "@mui/base";
