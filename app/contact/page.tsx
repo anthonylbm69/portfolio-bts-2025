@@ -1,5 +1,4 @@
 import { Card, CardHeader, CardContent } from "@/components/ui/card"
-import { Avatar } from "@/components/ui/avatar"
 import Link from "next/link"
 import { Label } from "@/components/ui/label"
 import { Input } from "@/components/ui/input"
