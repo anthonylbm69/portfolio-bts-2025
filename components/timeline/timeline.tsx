@@ -9,13 +9,13 @@ export function TimelineDemo() {
             content: (
                 <div>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
-                        BAC STI2D - Sciences et Technologies de l'Industrie et du Développement Durable
+                        BAC STI2D - Sciences et Technologies de l&apos;Industrie et du Développement Durable
                     </p>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
                         - Lycée Condorcet à Saint-Priest 69800
                     </p>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Premier pas dans le monde de l'informatique.
+                        Premier pas dans le monde de l&apos;informatique.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         <Image
@@ -40,7 +40,7 @@ export function TimelineDemo() {
                         En alternance chez HMONG LBM
                     </p>
                     <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
-                        Premier pas dans le monde du développement et réalisation de sites et d'applications.
+                        Premier pas dans le monde du développement et réalisation de sites et d&apos;applications.
                     </p>
                     <div className="grid grid-cols-2 gap-4">
                         <Image
