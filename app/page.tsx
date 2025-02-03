@@ -13,6 +13,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import ProjectCard from "@/components/Project-Card/projectCard";
 import React from "react";
 import {Button} from "@mui/base";
+import {TimelineDemo} from "@/components/timeline/timeline";
 
 export default function Home() {
     return (
