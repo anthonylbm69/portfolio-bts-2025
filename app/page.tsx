@@ -10,17 +10,19 @@ import {
     CarouselPrevious,
 } from "@/components/ui/carousel";
 import { Card, CardContent } from "@/components/ui/card";
-import Timeline from "@/components/timeline/timeline";
+import {TimelineDemo} from "@/components/timeline/timeline";
+import ProjectCard from "@/components/Project-Card/projectCard";
+import React from "react";
+import {Button} from "@mui/base";
 
 export default function Home() {
     return (
         <>
-            <div className="md:container md:mx-auto">
-                {/* Section principale */}
+            <div id="home" className="md:container md:mx-auto">
                 <div className="relative flex items-center justify-center">
                     <div
                         className="absolute flex flex-col items-center"
-                        style={{ bottom: "10rem", left: "20rem", zIndex: "7" }}
+                        style={{ bottom: "10rem", left: "25rem", zIndex: "7" }}
                     >
                         <BlurFade delay={0.25 * 0.05} inView>
                             <CornerUpRight className="bg-sky-400 text-2xl" />
@@ -33,7 +35,7 @@ export default function Home() {
                     <BlurFade delay={0.25 * 0.05} inView>
                         <Image
                             className="mt-2 mb-4 size-full rounded-2xl object-contain"
-                            src="/antorando.jpg"
+                            src="/antojaposaka.jpg"
                             height={500}
                             width={500}
                             alt="anto"
@@ -41,9 +43,8 @@ export default function Home() {
                     </BlurFade>
                 </div>
 
-                {/* À propos de moi */}
                 <div>
-                    <h1 className="scroll-m-20 pb-8 text-4xl border-b font-extrabold tracking-tight lg:text-5xl">
+                    <h1 id="about" className="scroll-m-20 pb-8 text-4xl border-b font-extrabold tracking-tight lg:text-5xl">
                         À propos de moi
                     </h1>
                     <div className="flex flex-col md:flex-row items-start md:items-center gap-6">
@@ -84,7 +85,6 @@ export default function Home() {
                         </div>
                     </div>
 
-                    {/* Compétences */}
                     <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight">
                         Mes compétences
                     </h2>
@@ -128,11 +128,43 @@ export default function Home() {
                         </Carousel>
                     </div>
 
-                    {/* Parcours */}
                     <h2 className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight">
                         Mon Parcours
                     </h2>
-                    <Timeline />
+                    <TimelineDemo />
+
+                    <h2 id="projects" className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight">
+                        Mes Projets
+                    </h2>
+                    <ProjectCard
+                        title="Mon Projet sur le tourisme en Corée du Sud - KTourism"
+                        description="En 2019, j’ai eu l’opportunité de voyager en Corée du Sud, une expérience qui a profondément marqué ma vision du monde. Dès mon arrivée, j’ai été captivé par la richesse de la culture coréenne : son histoire fascinante, sa cuisine savoureuse, ses paysages époustouflants et, bien sûr, l’accueil chaleureux de ses habitants.
+                        Depuis ce voyage, ma passion pour la culture coréenne n’a cessé de grandir. C’est ainsi qu’est née l’idée de ce projet : un site dédié au tourisme en Corée du Sud. Mon objectif est de partager mon expérience et de guider celles et ceux qui souhaitent découvrir ce pays unique.
+                        Sur ce site, vous trouverez des conseils pratiques, des itinéraires de voyage, des recommandations de lieux incontournables et une immersion dans la culture coréenne à travers ses traditions, sa gastronomie et sa modernité.
+                        Que vous soyez un voyageur en quête d’aventure ou simplement curieux de découvrir la Corée du Sud, j’espère que ce projet vous inspirera autant qu’il m’a passionné !"
+                        imageUrl="/ktourism.jpg"
+                    />
+                    <div>
+                        <h2 id="cv" className="mt-10 scroll-m-20 border-b pb-2 text-3xl font-semibold tracking-tight">
+                            Mon Curriculum Vitae
+                        </h2>
+                        <div className="mt-5 flex flex-col items-center justify-center">
+                            <a href="/cv.pdf" download="CV_ANTHONY_LYBLIAMAY.pdf">
+                                <Image
+                                    src={'/cv.png'}
+                                    alt={'curriculum vitae'}
+                                    width={400}
+                                    height={400}
+                                    className="mt-5 flex items-center justify-between"
+                                />
+                            </a>
+                        </div>
+                        <div className="mt-5 flex flex-col items-center justify-center">
+                            <a href="/cv.pdf" download="CV_ANTHONY_LYBLIAMAY.pdf">
+                                <Button className="ml-4">📄 Télécharger mon CV</Button>
+                            </a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </>

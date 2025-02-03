@@ -1,46 +1,63 @@
+import Image from "next/image";
 import React from "react";
-import { cn } from "@/lib/utils";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import BlurFade from "@/components/ui/blur-fade";
+import { Timeline } from "@/components/ui/timeline";
 
-const Timeline = () => {
-    const timelineData = [
-        { title: "BAC STI2D - Sciences et Technologies de l'Industrie et du Développement Durable", year: "2020", description: "Premiers pas dans le développement." },
-        { title: "BTS SIO - Services Informatiques aux Organisations - Solutions Logicielles et Applications Métiers - Option SLAM", year: "2023", description: "Réalisation de sites et d'applications." },
-    ];
-
-    return (
-        <div className="mt-14 relative w-full h-screen flex items-center justify-center px-4">
-            <div className="absolute w-2 h-full bg-gray-300"></div>
-            <BlurFade delay={0.25 * 0.05} inView>
-            <div className="relative flex flex-col gap-12">
-                {timelineData.map((item, index) => (
-
-                    <div
-                        key={index}
-                        className={cn(
-                            "relative flex items-center",
-                            "flex-row"
-                        )}
-                    >
-                        <Card className={cn("w-64", "ml-6 text-left"
-                            )}
-                        >
-                            <CardHeader>
-                                <Badge className="mb-2">{item.year}</Badge>
-                                <CardTitle>{item.title}</CardTitle>
-                            </CardHeader>
-                            <CardContent>
-                                <p className="text-sm text-gray-600">{item.description}</p>
-                            </CardContent>
-                        </Card>
+export function TimelineDemo() {
+    const data = [
+        {
+            title: "2020",
+            content: (
+                <div>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal">
+                        BAC STI2D - Sciences et Technologies de l'Industrie et du Développement Durable
+                    </p>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        - Lycée Condorcet à Saint-Priest 69800
+                    </p>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        Premier pas dans le monde de l'informatique.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4">
+                        <Image
+                            src="/4799410.jpg"
+                            alt="startup template"
+                            width={500}
+                            height={500}
+                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        />
                     </div>
-                ))}
-            </div>
-            </BlurFade>
+                </div>
+            ),
+        },
+        {
+            title: "2023 - 2025",
+            content: (
+                <div>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        BTS SIO - Services Informatiques aux Organisations - Solutions Logicielles et Applications Métiers - Option SLAM
+                    </p>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        En alternance chez HMONG LBM
+                    </p>
+                    <p className="text-neutral-800 dark:text-neutral-200 text-xs md:text-sm font-normal mb-8">
+                        Premier pas dans le monde du développement et réalisation de sites et d'applications.
+                    </p>
+                    <div className="grid grid-cols-2 gap-4">
+                        <Image
+                            src="/4401280.jpg"
+                            alt="hero template"
+                            width={500}
+                            height={500}
+                            className="rounded-lg object-cover h-20 md:h-44 lg:h-60 w-full shadow-[0_0_24px_rgba(34,_42,_53,_0.06),_0_1px_1px_rgba(0,_0,_0,_0.05),_0_0_0_1px_rgba(34,_42,_53,_0.04),_0_0_4px_rgba(34,_42,_53,_0.08),_0_16px_68px_rgba(47,_48,_55,_0.05),_0_1px_0_rgba(255,_255,_255,_0.1)_inset]"
+                        />
+                    </div>
+                </div>
+            ),
+        },
+    ];
+    return (
+        <div className="w-full">
+            <Timeline data={data} />
         </div>
     );
-};
-
-export default Timeline;
+}
