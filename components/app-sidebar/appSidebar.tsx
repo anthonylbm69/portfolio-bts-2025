@@ -13,7 +13,6 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sideBarWithStickyButton";
-
 const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "About", url: "#about", icon: User },
@@ -23,7 +22,7 @@ const items = [
     { title: "Veille Technologie", url: "/veille-techno", icon: Lightbulb },
 ];
 
-const alwaysNavigate = ["/contact", "/veille-techno"];
+const alwaysNavigate: string[] = ["/contact", "/veille-techno"];
 
 export function AppSidebar() {
     const router = useRouter();
@@ -38,7 +37,7 @@ export function AppSidebar() {
                 if (section) {
                     section.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
-            }, 300);
+            }, 300); // Délai pour attendre le rendu de la page
         }
     }, [searchParams]);
 
