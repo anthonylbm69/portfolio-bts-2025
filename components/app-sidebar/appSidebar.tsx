@@ -1,7 +1,7 @@
 "use client";
 
+import { Suspense, useEffect } from "react";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useEffect } from "react";
 import { Calendar, Home, User, Lightbulb, Phone, FileText } from "lucide-react";
 import {
     Sidebar,
@@ -13,6 +13,7 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sideBarWithStickyButton";
+
 const items = [
     { title: "Home", url: "/", icon: Home },
     { title: "About", url: "#about", icon: User },
@@ -24,7 +25,7 @@ const items = [
 
 const alwaysNavigate: string[] = ["/contact", "/veille-techno"];
 
-export function AppSidebar() {
+function NavigationHandler() {
     const router = useRouter();
     const currentPath = usePathname();
     const searchParams = useSearchParams();
@@ -37,7 +38,7 @@ export function AppSidebar() {
                 if (section) {
                     section.scrollIntoView({ behavior: "smooth", block: "start" });
                 }
-            }, 300); // Délai pour attendre le rendu de la page
+            }, 300);
         }
     }, [searchParams]);
 
@@ -73,22 +74,32 @@ export function AppSidebar() {
     };
 
     return (
+        <>
+            {items.map((item) => (
+                <SidebarMenuItem key={item.title}>
+                    <SidebarMenuButton asChild>
+                        <button onClick={() => handleNavigation(item.url)}>
+                            <item.icon />
+                            <span>{item.title}</span>
+                        </button>
+                    </SidebarMenuButton>
+                </SidebarMenuItem>
+            ))}
+        </>
+    );
+}
+
+export function AppSidebar() {
+    return (
         <Sidebar>
             <SidebarContent>
                 <SidebarGroup>
                     <SidebarGroupLabel>Portfolio de Anthony</SidebarGroupLabel>
                     <SidebarGroupContent>
                         <SidebarMenu>
-                            {items.map((item) => (
-                                <SidebarMenuItem key={item.title}>
-                                    <SidebarMenuButton asChild>
-                                        <button onClick={() => handleNavigation(item.url)}>
-                                            <item.icon />
-                                            <span>{item.title}</span>
-                                        </button>
-                                    </SidebarMenuButton>
-                                </SidebarMenuItem>
-                            ))}
+                            <Suspense fallback={<div>Chargement...</div>}>
+                                <NavigationHandler />
+                            </Suspense>
                         </SidebarMenu>
                     </SidebarGroupContent>
                 </SidebarGroup>
