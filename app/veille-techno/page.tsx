@@ -154,7 +154,7 @@ function Page() {
 
     return (
         <div className="flex flex-col space-y-6">
-            <div className="p-4 bg-gray-100 rounded-lg shadow">
+            <div className="p-4 rounded-lg shadow">
                 <h1 className="text-2xl font-bold mb-2">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
                 <p className="text-gray-700">
                     L&apos;intelligence artificielle (IA) est un domaine en constante évolution qui transforme de nombreux secteurs,

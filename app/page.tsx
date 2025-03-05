@@ -62,18 +62,23 @@ export default function Home() {
                 <div className="flex flex-col md:flex-row items-center gap-6">
                     <BlurFade delay={0.0125} inView>
                         <Image
-                            src="/DSC04686.JPG"
+                            src="/anto-pont-londre.png"
                             alt="carre"
                             height={500}
                             width={400}
                             className="rounded-lg shadow-lg mt-4 w-full max-w-xs sm:max-w-md md:max-w-lg"
                         />
                     </BlurFade>
-                    <div className="leading-7 text-justify text-sm sm:text-base">
-                        <p className="mt-4">
+                    <div className="leading-7 text-justify text-sm sm:text-base w-full md:w-1/2 mt-4 md:mt-0">
+                        <p>
                             Bonjour ! 👋<br />
-                            Je m&apos;appelle Anthony Lybliamay, j&apos;ai 20 ans et je suis étudiant en développement web...
+                            Je m&apos;appelle Anthony Lybliamay, j&apos;ai 20 ans et je suis étudiant en développement web et application mobile.
+                            Passionné par la technologie et l&apos;innovation, j&apos;aime explorer de nouveaux horizons, tant dans mon domaine que dans la vie.
+                            Curieux et avide de découvertes, je prends plaisir à voyager, à m&apos;imprégner de nouvelles cultures et à sortir de ma zone de confort.
+                            J&apos;aime aussi prendre des photos et des vidéos, capturer des moments uniques et immortaliser des paysages incroyables.
+                            Le ski est une de mes grandes passions, tout comme le besoin de me reconnecter à la nature pour trouver un équilibre entre le digital et le monde réel.
                         </p>
+
                     </div>
                 </div>
                 <TimelineDemo/>
