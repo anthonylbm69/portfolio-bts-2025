@@ -76,6 +76,7 @@ export default function Home() {
                         </p>
                     </div>
                 </div>
+                <TimelineDemo/>
             </section>
 
             {/* SECTION COMPÉTENCES */}
