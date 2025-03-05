@@ -1,3 +1,4 @@
+'use client'
 import Image from "next/image";
 import { CornerUpRight } from "lucide-react";
 import BlurFade from "@/components/ui/blur-fade";
@@ -30,55 +31,55 @@ export default function Home() {
     ];
 
     return (
-        <>
-            <div id="home" className="container mx-auto px-4">
-                {/* SECTION IMAGE + PRÉSENTATION */}
-                <div className="relative flex flex-col items-center">
-                    <BlurFade delay={0.25 * 0.05} inView>
-                        <Image
-                            className="mt-2 mb-4 w-full max-w-xs sm:max-w-md md:max-w-lg rounded-2xl object-cover"
-                            src="/antojaposaka.jpg"
-                            height={500}
-                            width={500}
-                            alt="anto"
+        <div id="home" className="container mx-auto px-4">
+            {/* SECTION IMAGE + PRÉSENTATION */}
+            <div className="relative flex flex-col items-center">
+                <BlurFade delay={0.0125} inView>
+                    <Image
+                        className="mt-2 mb-4 w-full max-w-xs sm:max-w-md md:max-w-lg rounded-2xl object-cover"
+                        src="/antojaposaka.jpg"
+                        height={500}
+                        width={500}
+                        alt="anto"
+                    />
+                </BlurFade>
+                <div className="absolute flex flex-col items-center bottom-2 left-1/2 -translate-x-1/2 md:bottom-[3rem]" style={{ zIndex: 7 }}>
+                    <BlurFade delay={0.0125} inView>
+                        <CornerUpRight className="bg-sky-400 text-2xl" />
+                        <WordRotate
+                            className="bg-sky-400 text-lg sm:text-xl font-bold text-black dark:text-white text-center"
+                            words={["Ici c'est moi", "Anthony", "Anto pour les intimes"]}
                         />
                     </BlurFade>
-                    <div className="absolute flex flex-col items-center bottom-2 left-1/2 -translate-x-1/2 md:bottom-[3rem]" style={{ zIndex: 7 }}>
-                        <BlurFade delay={0.25 * 0.05} inView>
-                            <CornerUpRight className="bg-sky-400 text-2xl" />
-                            <WordRotate
-                                className="bg-sky-400 text-lg sm:text-xl font-bold text-black dark:text-white text-center"
-                                words={["Ici c'est moi", "Anthony", "Anto pour les intimes"]}
-                            />
-                        </BlurFade>
+                </div>
+            </div>
+
+            {/* SECTION À PROPOS */}
+            <section>
+                <h1 id="about" className="scroll-m-20 pb-8 text-3xl sm:text-4xl border-b font-extrabold tracking-tight">
+                    À propos de moi
+                </h1>
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                    <BlurFade delay={0.0125} inView>
+                        <Image
+                            src="/DSC04686.JPG"
+                            alt="carre"
+                            height={500}
+                            width={400}
+                            className="rounded-lg shadow-lg mt-4 w-full max-w-xs sm:max-w-md md:max-w-lg"
+                        />
+                    </BlurFade>
+                    <div className="leading-7 text-justify text-sm sm:text-base">
+                        <p className="mt-4">
+                            Bonjour ! 👋<br />
+                            Je m&apos;appelle Anthony Lybliamay, j&apos;ai 20 ans et je suis étudiant en développement web...
+                        </p>
                     </div>
                 </div>
+            </section>
 
-                {/* SECTION À PROPOS */}
-                <div>
-                    <h1 id="about" className="scroll-m-20 pb-8 text-3xl sm:text-4xl border-b font-extrabold tracking-tight">
-                        À propos de moi
-                    </h1>
-                    <div className="flex flex-col md:flex-row items-center gap-6">
-                        <BlurFade delay={0.25 * 0.05} inView>
-                            <Image
-                                src="/DSC04686.JPG"
-                                alt="carre"
-                                height={500}
-                                width={400}
-                                className="rounded-lg shadow-lg mt-4 w-full max-w-xs sm:max-w-md md:max-w-lg"
-                            />
-                        </BlurFade>
-                        <div className="leading-7 text-justify text-sm sm:text-base">
-                            <p className="mt-4">
-                                Bonjour ! 👋<br />
-                                Je m'appelle Anthony Lybliamay, j'ai 20 ans et je suis étudiant en développement web...
-                            </p>
-                        </div>
-                    </div>
-                </div>
-
-                {/* SECTION COMPÉTENCES */}
+            {/* SECTION COMPÉTENCES */}
+            <section>
                 <h2 className="mt-10 scroll-m-20 border-b pb-2 text-2xl sm:text-3xl font-semibold tracking-tight">
                     Mes compétences
                 </h2>
@@ -101,14 +102,10 @@ export default function Home() {
                         <CarouselNext />
                     </Carousel>
                 </div>
+            </section>
 
-                {/* SECTION PARCOURS */}
-                <h2 className="mt-10 scroll-m-20 border-b pb-2 text-2xl sm:text-3xl font-semibold tracking-tight">
-                    Mon Parcours
-                </h2>
-                <TimelineDemo />
-
-                {/* SECTION PROJETS */}
+            {/* SECTION PROJETS */}
+            <section>
                 <h2 id="projects" className="mt-10 scroll-m-20 border-b pb-2 text-2xl sm:text-3xl font-semibold tracking-tight">
                     Mes Projets
                 </h2>
@@ -117,8 +114,10 @@ export default function Home() {
                     description="En 2019, j’ai eu l’opportunité de voyager en Corée du Sud..."
                     imageUrl="/ktourism.jpg"
                 />
+            </section>
 
-                {/* SECTION CV */}
+            {/* SECTION CV */}
+            <section>
                 <h2 id="cv" className="mt-10 scroll-m-20 border-b pb-2 text-2xl sm:text-3xl font-semibold tracking-tight">
                     Mon Curriculum Vitae
                 </h2>
@@ -130,7 +129,7 @@ export default function Home() {
                         <Button className="mt-4">📄 Télécharger mon CV</Button>
                     </a>
                 </div>
-            </div>
-        </>
+            </section>
+        </div>
     );
 }

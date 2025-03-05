@@ -129,7 +129,7 @@ const generateMonths = () => {
         },
     ];
 
-    let currentDate = new Date(startDate);
+    const currentDate = new Date(startDate);
     let articleIndex = 0;
     while (currentDate <= endDate) {
         months.push({
@@ -155,13 +155,14 @@ function Page() {
     return (
         <div className="flex flex-col space-y-6">
             <div className="p-4 bg-gray-100 rounded-lg shadow">
-                <h1 className="text-2xl font-bold mb-2">Veille Technologique sur l'Intelligence Artificielle</h1>
+                <h1 className="text-2xl font-bold mb-2">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
                 <p className="text-gray-700">
-                    L'intelligence artificielle (IA) est un domaine en constante évolution qui transforme de nombreux secteurs,
-                    de la santé à l’industrie en passant par la création numérique. Afin de rester informé des dernières avancées,
-                    j’ai suivi chaque mois les actualités majeures sur l’IA et ses impacts. Cette veille technologique regroupe
-                    les événements, recherches et innovations les plus marquants de septembre 2023 à aujourd’hui.
+                    L&apos;intelligence artificielle (IA) est un domaine en constante évolution qui transforme de nombreux secteurs,
+                    de la santé à l&apos;industrie en passant par la création numérique. Afin de rester informé des dernières avancées,
+                    j&apos;ai suivi chaque mois les actualités majeures sur l&apos;IA et ses impacts. Cette veille technologique regroupe
+                    les événements, recherches et innovations les plus marquants de septembre 2023 à aujourd&apos;hui.
                 </p>
+
             </div>
 
             <div className="flex space-x-4">
