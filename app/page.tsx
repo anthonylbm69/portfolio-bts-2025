@@ -70,15 +70,32 @@ export default function Home() {
                         />
                     </BlurFade>
                     <div className="leading-7 text-justify text-sm sm:text-base w-full md:w-1/2 mt-4 md:mt-0">
-                        <p>
-                            Bonjour ! 👋<br />
-                            Je m&apos;appelle Anthony Lybliamay, j&apos;ai 20 ans et je suis étudiant en développement web et application mobile.
-                            Passionné par la technologie et l&apos;innovation, j&apos;aime explorer de nouveaux horizons, tant dans mon domaine que dans la vie.
-                            Curieux et avide de découvertes, je prends plaisir à voyager, à m&apos;imprégner de nouvelles cultures et à sortir de ma zone de confort.
-                            J&apos;aime aussi prendre des photos et des vidéos, capturer des moments uniques et immortaliser des paysages incroyables.
-                            Le ski est une de mes grandes passions, tout comme le besoin de me reconnecter à la nature pour trouver un équilibre entre le digital et le monde réel.
-                        </p>
-
+                        <div className="leading-7 text-justify">
+                            <p className="mt-6">
+                                Bonjour ! 👋<br />
+                                Je m&apos;appelle Anthony Lybliamay,&nbsp; j&apos;ai 20 ans et je suis
+                                actuellement étudiant en développement web. Passionné par le
+                                monde du numérique et de la technologie,&nbsp; je me spécialise dans
+                                la création de sites et d&apos;applications web modernes et
+                                performants.
+                            </p>
+                            <p className="mt-6">
+                                Depuis que j&apos;ai découvert le code,&nbsp; j&apos;ai été captivé
+                                par la possibilité de donner vie à des idées grâce à la
+                                programmation. Aujourd&apos;hui,&nbsp; j&apos;affine mes compétences
+                                en front-end et back-end,&nbsp; en utilisant des technologies comme
+                                React,&nbsp; Node.js,&nbsp; etc.
+                            </p>
+                            <p className="mt-6">
+                                Mon objectif est de continuer à apprendre et de contribuer à des
+                                projets qui combinent créativité,&nbsp; performance et innovation.
+                            </p>
+                            <p className="mt-6">
+                                En dehors du développement,&nbsp; j&apos;aime le ski,
+                                créer du contenu (comme des vidéos et des photos),&nbsp; voyager,&nbsp; et
+                                explorer de nouvelles idées.
+                            </p>
+                        </div>
                     </div>
                 </div>
                 <TimelineDemo/>
@@ -117,7 +134,10 @@ export default function Home() {
                 </h2>
                 <ProjectCard
                     title="Mon Projet sur le tourisme en Corée du Sud - KTourism"
-                    description="En 2019, j’ai eu l’opportunité de voyager en Corée du Sud..."
+                    description="En 2019, j’ai eu l’opportunité de voyager en Corée du Sud, une expérience qui a profondément marqué ma vision du monde. Dès mon arrivée, j’ai été captivé par la richesse de la culture coréenne : son histoire fascinante, sa cuisine savoureuse, ses paysages époustouflants et, bien sûr, l’accueil chaleureux de ses habitants.
+                        Depuis ce voyage, ma passion pour la culture coréenne n’a cessé de grandir. C’est ainsi qu’est née l’idée de ce projet : un site dédié au tourisme en Corée du Sud. Mon objectif est de partager mon expérience et de guider celles et ceux qui souhaitent découvrir ce pays unique.
+                        Sur ce site, vous trouverez des conseils pratiques, des itinéraires de voyage, des recommandations de lieux incontournables et une immersion dans la culture coréenne à travers ses traditions, sa gastronomie et sa modernité.
+                        Que vous soyez un voyageur en quête d’aventure ou simplement curieux de découvrir la Corée du Sud, j’espère que ce projet vous inspirera autant qu’il m’a passionné !"
                     imageUrl="/ktourism.jpg"
                 />
             </section>
