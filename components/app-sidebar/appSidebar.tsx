@@ -15,9 +15,9 @@ import {
 } from "@/components/ui/sideBarWithStickyButton";
 
 const items = [
-    { title: "Home", url: "/", icon: Home },
-    { title: "About", url: "#about", icon: User },
-    { title: "Project", url: "#projects", icon: Calendar },
+    { title: "Accueil", url: "/", icon: Home },
+    { title: "À propos", url: "#about", icon: User },
+    { title: "Projet", url: "#projects", icon: Calendar },
     { title: "Curriculum Vitae", url: "#cv", icon: FileText },
     { title: "Contact", url: "/contact", icon: Phone },
     { title: "Veille Technologie", url: "/veille-techno", icon: Lightbulb },
