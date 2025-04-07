@@ -1,6 +1,7 @@
 'use client';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import React from "react";
+import Image from "next/image";
 
 const generateMonths = () => {
     const startDate = new Date(2023, 8); // Septembre 2023
@@ -155,7 +156,7 @@ function Page() {
     return (
         <div className="flex flex-col space-y-6">
             <div className="p-4 rounded-lg shadow">
-                <h1 className="text-2xl font-bold mb-2 ml-10">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
+                <h1 className="text-2xl font-bold mb-2">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
                 <p className="text-gray-700">
                     L&apos;intelligence artificielle (IA) est un domaine en constante évolution qui transforme de nombreux secteurs,
                     de la santé à l&apos;industrie en passant par la création numérique. Afin de rester informé des dernières avancées,
@@ -176,7 +177,7 @@ function Page() {
                                     <AccordionContent>
                                         <h3 className="text-lg font-semibold mb-2">{month.title}</h3>
                                         <a href={month.link} target="_blank" rel="noopener noreferrer">
-                                            <img src={month.image} alt={month.label} className="mb-4 rounded" />
+                                            <Image src={month.image} alt={month.label} className="mb-4 rounded" />
                                         </a>
                                         <p>{month.content}</p>
                                     </AccordionContent>

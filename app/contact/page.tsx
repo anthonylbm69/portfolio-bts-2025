@@ -41,7 +41,7 @@ export default function Contact() {
                 setError(data.error || "Une erreur est survenue.")
             }
         } catch (err) {
-            setError("Erreur réseau.")
+            setError("Erreur réseau." + err)
         } finally {
             setLoading(false)
         }

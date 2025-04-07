@@ -24,8 +24,9 @@ export async function POST(req: Request) {
         })
 
         return NextResponse.json({ success: true, data }, { status: 200 })
-    } catch (error: any) {
-        console.error("❌ Erreur Resend complète :", error)
-        return NextResponse.json({ error: error.message || 'Erreur serveur' }, { status: 500 })
+    } catch (error: unknown) {
+        const err = error as Error;
+        console.error("❌ Erreur Resend complète :", err);
+        return NextResponse.json({ error: err.message || 'Erreur serveur' }, { status: 500 });
     }
 }
