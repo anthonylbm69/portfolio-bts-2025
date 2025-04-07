@@ -4,7 +4,7 @@ import "./globals.css";
 import Footer from "@/components/Layout/footer";
 import ReactClientProvider from "@/components/Provider/queryClientProvider";
 import {SidebarProvider, SidebarTrigger} from "@/components/ui/sideBarWithStickyButton";
-import {AppSidebar} from "@/components/app-sidebar/appSidebar";
+import AppSidebar from "@/components/app-sidebar/appSidebar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -35,9 +35,9 @@ export default function RootLayout({
       <ReactClientProvider>
           <SidebarProvider>
               <AppSidebar />
-              <SidebarTrigger />
-               {children}
+              {children}
           </SidebarProvider>
+
           <Footer/>
       </ReactClientProvider>
       </body>
