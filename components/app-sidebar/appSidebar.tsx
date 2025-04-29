@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { usePathname, useRouter } from "next/navigation"
-import { Home, User, Calendar, FileText, Phone, Lightbulb, Menu, X } from "lucide-react"
+import { Home, User, Calendar, FileText, Phone, Lightbulb, Menu, X, Table2 } from "lucide-react"
 
 const navItems = [
     { label: "Accueil", href: "/", icon: Home },
@@ -10,7 +10,8 @@ const navItems = [
     { label: "Projets", href: "#projects", icon: Calendar },
     { label: "CV", href: "#cv", icon: FileText },
     { label: "Contact", href: "/contact", icon: Phone },
-    { label: "Veille Tech", href: "/veille-techno", icon: Lightbulb },
+    { label: "Veille Technologique", href: "/veille-techno", icon: Lightbulb },
+    { label: "Tableau de compétence", href: "/tableau-competence", icon: Table2 },
 ]
 
 export default function AppSidebar() {

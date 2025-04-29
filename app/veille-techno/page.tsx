@@ -4,8 +4,8 @@ import React from "react";
 import Image from "next/image";
 
 const generateMonths = () => {
-    const startDate = new Date(2023, 8); // Septembre 2023
-    const endDate = new Date(2025, 5); // Juin 2025
+    const startDate = new Date(2023, 8);
+    const endDate = new Date(2025, 5);
     const months = [];
     const monthNames = [
         "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
@@ -41,7 +41,7 @@ const generateMonths = () => {
             title: "Janvier 2024 - Intelligence artificielle : malgré les critiques, la France maintient la pression sur l’AI Act",
             content: "Alors que les Etats membres de l’Union sont appelés à ratifier le projet de règlement européen, Paris y voit « encore quelques points qui posent problème », notamment sur le droit d’auteur.",
             link: "https://www.lemonde.fr/economie/article/2024/01/24/intelligence-artificielle-malgre-les-critiques-la-france-maintient-la-pression-sur-l-ai-act_6212773_3234.html",
-            image: "jan-2024.png"
+            image: "/jan-2024.png"
         },
         {
             title: "Février 2024 - Grâce à l'IA, nous avons conduit une voiture avec les yeux",
@@ -154,18 +154,29 @@ function Page() {
     const years = [2023, 2024, 2025];
 
     return (
-        <div className="flex flex-col space-y-6">
-            <div className="p-4 rounded-lg shadow">
-                <h1 className="text-2xl font-bold mb-2">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
+        <div className="flex flex-col space-y-6 w-full max-w-6xl px-4 mx-auto">
+            <div className="p-4 rounded-lg shadow pl-10">
+                <h1 className="text-2xl font-bold mb-4">Veille Technologique sur l&apos;Intelligence Artificielle</h1>
+                <div className="flex flex-col md:flex-row items-start gap-6">
+                    <Image
+                        src="/ia.png"
+                        alt="intelligence artificielle"
+                        width={300}
+                        height={300}
+                        className="rounded-lg w-full md:w-auto"
+                    />
                 <p className="text-gray-700">
                     L&apos;intelligence artificielle (IA) est un domaine en constante évolution qui transforme de nombreux secteurs,
                     de la santé à l&apos;industrie en passant par la création numérique. Afin de rester informé des dernières avancées,
                     j&apos;ai suivi chaque mois les actualités majeures sur l&apos;IA et ses impacts. Cette veille technologique regroupe
                     les événements, recherches et innovations les plus marquants de septembre 2023 à aujourd&apos;hui.
                 </p>
-
             </div>
-
+                <div className="mt-8">
+                    <h2 className="text-xl font-semibold mb-2">Diffusion des Informations</h2>
+                    <p className="text-gray-700 md-10">
+                        Durant ma scolarité, je me suis informé chaque mois sur l&apos; intelligence artificielle en effectuant des recherches sur Internet.                    </p>
+                </div>
             <div className="flex space-x-4">
                 {years.map((year) => (
                     <div key={year} className="border p-4 rounded-lg shadow-md flex-1">
@@ -177,7 +188,7 @@ function Page() {
                                     <AccordionContent>
                                         <h3 className="text-lg font-semibold mb-2">{month.title}</h3>
                                         <a href={month.link} target="_blank" rel="noopener noreferrer">
-                                            <Image src={month.image} alt={month.label} className="mb-4 rounded" />
+                                            <Image src={month.image} alt={month.label} width={300} height={300} className="mb-4 rounded" />
                                         </a>
                                         <p>{month.content}</p>
                                     </AccordionContent>
@@ -186,6 +197,7 @@ function Page() {
                         </Accordion>
                     </div>
                 ))}
+            </div>
             </div>
         </div>
     );
