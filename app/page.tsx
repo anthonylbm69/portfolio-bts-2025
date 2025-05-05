@@ -1,9 +1,7 @@
 'use client'
 import Link from "next/link";
 import Image from "next/image";
-import {CornerUpRight} from "lucide-react";
 import BlurFade from "@/components/ui/blur-fade";
-import WordRotate from "@/components/ui/word-rotate";
 import {
     Carousel,
     CarouselContent,
@@ -14,7 +12,6 @@ import {
 import {Card, CardContent} from "@/components/ui/card";
 import ProjectCard from "@/components/Project-Card/projectCard";
 import React from "react";
-import {Button} from "@mui/base";
 import {TimelineDemo} from "@/components/timeline/timeline";
 
 interface CarouselItemProps {
