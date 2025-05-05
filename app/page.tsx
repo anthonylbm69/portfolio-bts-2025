@@ -30,28 +30,31 @@ export default function Home() {
         {src: "/css.png", alt: "CSS Logo"},
         {src: "/js.png", alt: "JavaScript Logo"},
         {src: "/expo.png", alt: "Expo Go Logo"},
+        {src: "/PHP.png", alt: "Php"},
+        {src: "/synfo.png", alt: "Symfony"},
+        {src: "/cy.png", alt: "Cypress"},
+
     ];
 
     return (
         <div id="home" className="container mx-auto px-4">
-            <div className="relative flex flex-col items-center">
+            <div className="flex items-center justify-center gap-8">
+                {/* Image ronde agrandie */}
                 <BlurFade delay={0.0125} inView>
                     <Image
-                        className="mt-2 mb-4 w-full max-w-xs sm:max-w-md md:max-w-lg rounded-2xl object-cover"
+                        className="w-64 h-64 rounded-full object-cover mt-8 mb-8"
                         src="/antojaposaka.jpg"
-                        height={500}
-                        width={500}
+                        height={192}
+                        width={192}
                         alt="anto"
                     />
                 </BlurFade>
-                <div className="absolute flex flex-col items-center bottom-2 left-1/2 -translate-x-1/2 md:bottom-[3rem]"
-                     style={{zIndex: 7}}>
+
+                {/* Texte à droite */}
+                <div className="flex flex-col">
                     <BlurFade delay={0.0125} inView>
-                        <CornerUpRight className="bg-sky-400 text-2xl"/>
-                        <WordRotate
-                            className="bg-sky-400 text-lg sm:text-xl font-bold text-black dark:text-white text-center"
-                            words={["Ici c'est moi", "Anthony", "Anto pour les intimes"]}
-                        />
+                        <p className="text-2xl font-bold text-black dark:text-white">Anthony Lybliamay</p>
+                        <p className="text-xl text-gray-600 dark:text-gray-300">Développeur Junior en BTS SIO SLAM</p>
                     </BlurFade>
                 </div>
             </div>
@@ -142,7 +145,7 @@ export default function Home() {
                         <CarouselContent>
                             <CarouselItem
                                 className="basis-full md:basis-2/3 lg:basis-1/2"> {/* plus grand sur mobile et desktop */}
-                                <div className="p-6"> {/* padding plus généreux */}
+                                <div className="p-6">
                                     <ProjectCard
                                         title="Mon Projet sur le tourisme en Corée du Sud - KTourism"
                                         description="En 2019, j’ai eu l’opportunité de voyager en Corée du Sud, une expérience qui a profondément marqué ma vision du monde. Dès mon arrivée, j’ai été captivé par la richesse de la culture coréenne : son histoire fascinante, sa cuisine savoureuse, ses paysages époustouflants et, bien sûr, l’accueil chaleureux de ses habitants. Depuis ce voyage, ma passion pour la culture coréenne n’a cessé de grandir. C’est ainsi qu’est née l’idée de ce projet : un site dédié au tourisme en Corée du Sud."
@@ -152,11 +155,35 @@ export default function Home() {
                             </CarouselItem>
                             <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">
                                 <div className="p-6">
+                                    <ProjectCard
+                                        title="AP1 - Gestion de fiche de frais"
+                                        description="Application de gestion de fiches de frais développée sous Windows Forms. Elle permet aux visiteurs de saisir leurs frais professionnels
+                                        (repas, déplacements, hébergement, etc.) et à l’administrateur de valider, modifier ou refuser les notes de frais. L'application propose une interface intuitive,
+                                         une gestion des utilisateurs par rôle et un suivi clair des remboursements. Idéale pour les entreprises souhaitant simplifier la gestion des dépenses."
+                                        imageUrl="/ap1.png"
+                                    />
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">
+                                <div className="p-6">
+                                    <ProjectCard
+                                        title="AP2 - Gestion des ordonnances"
+                                        description="Application web de gestion d’ordonnances médicales développée avec C#, asp net core MVC et dotnet. Elle propose une interface responsive
+                                        permettant aux médecins de gérer efficacement les ordonnances, avec un accès à la liste des patients, leurs antécédents médicaux, allergies,
+                                        et traitements en cours. Elle inclut également une gestion des utilisateurs par rôle, facilitant l’organisation au sein des établissements de santé."
+                                        imageUrl="/ap2.png"
+                                    />
+                                </div>
+                            </CarouselItem>
+                            <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">
+                                <div className="p-6">
                                     <Link href="https://ap3.anthonylybliamay.fr" target="_blank"
                                           rel="noopener noreferrer">
                                         <ProjectCard
                                             title="AP3 - Gestion de Stock"
-                                            description="C'est une application de gestion de stock et de passation de commande"
+                                            description="Application web de gestion de stock de médicaments avec commandes en ligne, développée en React et Next.js. Elle offre
+                                             une interface responsive, un suivi de stock en temps réel, un système de commande, et une gestion des utilisateurs par rôle. Idéale
+                                              pour les pharmacies et établissements de santé."
                                             imageUrl="/ap3.png"
                                         />
                                     </Link>
@@ -166,18 +193,11 @@ export default function Home() {
                                 <div className="p-6">
                                     <ProjectCard
                                         title="AP4 - Réservation de terrain de sport"
-                                        description="Découvrez Anto'Five : votre nouvelle plateforme de réservation sportive
-                                                    Anto'Five révolutionne la réservation de terrains de sport.
-                                                    En quelques clics, trouvez et réservez des terrains de basketball, football, padel ou badminton directement depuis votre mobile.
-                                                    Conçue pour offrir une expérience fluide et fiable, notre application permet aux amateurs comme aux professionnels de :
-                                                    Accéder rapidement aux disponibilités des terrains en temps réel.
-                                                    Réserver facilement des créneaux horaires adaptés à leur emploi du temps.
-                                                    Participer à des tournois organisés régulièrement pour vivre une expérience compétitive et conviviale.
-                                                    Gérer l’ensemble de leurs réservations depuis un espace personnel sécurisé.
-                                                    Notre infrastructure repose sur Supabase pour garantir la rapidité des transactions et la sécurité des données.
-                                                    Développée en React Native avec Expo, Anto'Five propose une interface intuitive et performante, adaptée à tous les utilisateurs.
-                                                    Que vous soyez un joueur occasionnel ou un compétiteur passionné, Anto'Five vous accompagne pour vivre pleinement votre passion du sport."
-                                        imageUrl="/ap4.png"
+                                        description="Anto'Five est une application mobile de réservation de terrains de sport (football, basket, padel, badminton), pensée pour
+                                        offrir une expérience rapide, fluide et sécurisée. Elle permet de consulter les disponibilités en temps réel, réserver facilement, gérer
+                                        ses réservations et participer à des tournois. Développée en React Native avec Expo et propulsée par Supabase, Anto'Five s’adresse à tous
+                                         les passionnés de sport, amateurs comme compétiteurs."
+                                         imageUrl="/ap4.png"
                                     />
                                 </div>
                             </CarouselItem>

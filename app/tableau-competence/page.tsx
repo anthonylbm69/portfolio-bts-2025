@@ -15,11 +15,11 @@ const CompetencesPage = () => {
             </p>
 
             <div className="mt-5 flex flex-col items-center">
-                <a download="tableau-comp.pdf">
-                    <Image src="/tableau-comp.png" alt="curriculum vitae" width={300} height={300}
+                <a href="/tableau-comp.pdf" download="tableau-competence-anthony.pdf">
+                    <Image src="/tableau-comp.png" alt="curriculum vitae" width={500} height={500}
                            className="mt-5 w-full max-w-xs sm:max-w-sm md:max-w-md"/>
                 </a>
-                <a download="tableau-comp.pdf">
+                <a href="/tableau-comp.pdf" download="tableau-competence-anthony.pdf">
                     <button className="mt-4">📄 Télécharger mon tableau</button>
                 </a>
             </div>
