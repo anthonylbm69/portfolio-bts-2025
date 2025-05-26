@@ -2,7 +2,7 @@
 
 import { useState } from "react"
 import { usePathname, useRouter } from "next/navigation"
-import { Home, User, Calendar, FileText, Phone, Lightbulb, Menu, X, Table2, Camera } from "lucide-react"
+import { Home, User, Calendar, FileText, Phone, Lightbulb, Menu, X, Table2 } from "lucide-react"
 
 const navItems = [
     { label: "Accueil", href: "/", icon: Home },
