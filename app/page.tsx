@@ -153,6 +153,8 @@ export default function Home() {
                             </CarouselItem>
                             <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">
                                 <div className="p-6">
+                                    <Link href="https://github.com/anthonylbm69/AP1_GSB_Lybliamay" target="_blank"
+                                          rel="noopener noreferrer">
                                     <ProjectCard
                                         title="AP1 - Gestion de fiche de frais"
                                         description="Application de gestion de fiches de frais développée sous Windows Forms. Elle permet aux visiteurs de saisir leurs frais professionnels
@@ -160,17 +162,21 @@ export default function Home() {
                                          une gestion des utilisateurs par rôle et un suivi clair des remboursements. Idéale pour les entreprises souhaitant simplifier la gestion des dépenses."
                                         imageUrl="/ap1.png"
                                     />
+                                    </Link>
                                 </div>
                             </CarouselItem>
                             <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">
                                 <div className="p-6">
-                                    <ProjectCard
-                                        title="AP2 - Gestion des ordonnances"
-                                        description="Application web de gestion d’ordonnances médicales développée avec C#, asp net core MVC et dotnet. Elle propose une interface responsive
-                                        permettant aux médecins de gérer efficacement les ordonnances, avec un accès à la liste des patients, leurs antécédents médicaux, allergies,
-                                        et traitements en cours. Elle inclut également une gestion des utilisateurs par rôle, facilitant l’organisation au sein des établissements de santé."
-                                        imageUrl="/ap2.png"
-                                    />
+                                    <Link href='https://github.com/anthonylbm69/AP2_LYBLIAMAY_ANTHONY' target='_blank'
+                                          rel='noonpener noreferrer'>
+                                        <ProjectCard
+                                            title="AP2 - Gestion des ordonnances"
+                                            description="Application web de gestion d’ordonnances médicales développée avec C#, asp net core MVC et dotnet. Elle propose une interface responsive
+                                            permettant aux médecins de gérer efficacement les ordonnances, avec un accès à la liste des patients, leurs antécédents médicaux, allergies,
+                                            et traitements en cours. Elle inclut également une gestion des utilisateurs par rôle, facilitant l’organisation au sein des établissements de santé."
+                                            imageUrl="/ap2.png"
+                                        />
+                                    </Link>
                                 </div>
                             </CarouselItem>
                             <CarouselItem className="basis-full md:basis-2/3 lg:basis-1/2">

@@ -5,7 +5,7 @@ import Image from "next/image";
 
 const generateMonths = () => {
     const startDate = new Date(2023, 8);
-    const endDate = new Date(2025, 5);
+    const endDate = new Date(2025, 4);
     const months = [];
     const monthNames = [
         "Janvier", "Février", "Mars", "Avril", "Mai", "Juin",
@@ -123,10 +123,22 @@ const generateMonths = () => {
             image: "/feb-2025.png"
         },
         {
-            title: "Mars 2025 - AI Act : Quelles obligations s'appliquent dès le 2 février 2025 ?",
-            content: "Le règlement sur l'intelligence artificielle (RIA ou AI Act), premier cadre juridique complet sur l’intelligence artificielle en Europe, entrera progressivement en application à partir de 2025.",
-            link: "https://www.dastra.eu/fr/article/ai-act-quelles-obligations-sappliquent-des-le-2-fevrier-2025/58851",
-            image: ""
+            title: "Mars 2025 - 4 actualités qui changent la donne pour les entreprises",
+            content: "La chute du mur des performances avec Q3 d'OpenAI, DeepSeek : la démocratisation de l'IA haute performance, L'Europe prend position avec l'AI Act et Une bataille géopolitique qui s'intensifie ",
+            link: "https://www.ideagency.fr/blog/ia-2025",
+            image: "/mars-2025.png"
+        },
+        {
+            title: "Avril 2025 - Revue de presse Data & IA",
+            content: "Quelles sont les actualités qu’il ne fallait pas manquer dans les secteurs de la Data et de l’Intelligence artificielle ? Au programme : l’entreprise Bleu franchit la première étape vers la qualification SecNumCloud, Meta et Mark Zuckerberg sous pression judiciaire, face à la reconnaissance des émotions, la Cnil menace de sanctions en vertu de l’AI Act, BPCE dépasse les 40 000 utilisateurs pour son portail GenAI MAiA, le gouvernement relance timidement les offres de cloud de confiance, TerraMind ou l’IA générative de l’ESA pour mieux comprendre la Terre",
+            link: "https://fr.blog.businessdecision.com/revue-de-presse-data-ia-avril-2025",
+            image: "/avril-2025.png"
+        },
+        {
+            title: "Mai 2025 - IA : Meta entraînera ses systèmes d’IA avec les données des utilisateurs européens dès fin mai 2025",
+            content: "Dès fin mai, Meta utilisera les données des utilisateurs européens de Facebook et Instagram pour entraîner ses systèmes d’intelligence artificielle. Les utilisateurs seront prochainement informés, notamment de la possibilité de s’opposer dès maintenant au traitement de leurs données à ces fins.",
+            link: "https://www.cnil.fr/fr/meta-entrainement-ia-donnees-utilisateurs?utm_source=chatgpt.com",
+            image: "/mai-2025.png"
         },
     ];
 
